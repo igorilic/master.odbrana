@@ -1,0 +1,9 @@
+\beamer@endinputifotherversion {3.24pt}
+\select@language {serbianc}
+\beamer@sectionintoc {1}{Python}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{\IeC {\CYRS }\IeC {\cyri }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrk }\IeC {\cyrs }\IeC {\cyra } \IeC {\cyri } \IeC {\cyrt }\IeC {\cyri }\IeC {\cyrp }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyri } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrk }\IeC {\cyra }}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Upotreba}{11}{0}{1}
+\beamer@sectionintoc {2}{\IeC {\CYRP }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrzh }\IeC {\cyri }\IeC {\cyrv }\IeC {\cyra }\IeC {\cyrch }}{14}{0}{2}
+\beamer@subsectionintoc {2}{1}{\IeC {\CYRI }\IeC {\cyrn }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyrn }\IeC {\cyre }\IeC {\cyrt } \IeC {\cyrp }\IeC {\cyrr }\IeC {\cyre }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrzh }\IeC {\cyri }\IeC {\cyrv }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyri }}{14}{0}{2}
+\beamer@subsectionintoc {2}{2}{\IeC {\CYRV }\IeC {\cyre }\IeC {\cyrb }-\IeC {\cyrp }\IeC {\cyra }\IeC {\cyru }\IeC {\cyrk }}{18}{0}{2}
+\beamer@subsectionintoc {2}{3}{\IeC {\CYRR }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyrg }\IeC {\cyri }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrnje }\IeC {\cyre } \IeC {\cyrs }\IeC {\cyrt }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyrc }\IeC {\cyra }}{22}{0}{2}
