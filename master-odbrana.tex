@@ -1,5 +1,7 @@
 % $Header$
 
+% hyperref to work with cyrillic fonts
+\PassOptionsToPackage{unicode}{hyperref}
 \documentclass[11pt, serbianc, english]{beamer}
 
 % This file is a solution template for:
@@ -8,8 +10,13 @@
 % - Talk length is about 20min.
 % - Style is ornate.
 
-
-
+% translations
+\usepackage{translator}
+\uselanguage{Serbian}
+\languagepath{Serbian}
+\usedictionary{translator-basic-dictionary}
+\deftranslation[to=Serbian]{Outline}{Садржај}
+\deftranslation[to=Serbian]{example}{Пример}
 % Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
 %
 % In principle, this file can be redistributed and/or modified under
@@ -98,7 +105,7 @@
 % the beginning of each subsection:
 \AtBeginSubsection[]
 {
-  \begin{frame}<beamer>{Outline}
+  \begin{frame}<beamer>{Садржај}
     \tableofcontents[currentsection,currentsubsection]
   \end{frame}
 }
@@ -116,7 +123,7 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{Outline}
+\begin{frame}{Садржај}
   \tableofcontents
   % You might wish to add the option [pausesections]
 \end{frame}
@@ -139,149 +146,168 @@
 % - If you omit details that are vital to the proof/implementation,
 %   just say so once. Everybody will be happy with that.
 
-\section{Python}
+\section{Програмски језик Python}
 
-\subsection{Синтакса и типови података}
+\subsection{Синтакса програмског језика Python}
 
-\begin{frame}{Make Titles Informative. Use Uppercase Letters.}{Subtitles are optional.}
-  % - A title should summarize the slide in an understandable fashion
-  %   for anyone how does not follow everything on the slide itself.
-
-  \begin{itemize}
-  \item
-    Use \texttt{itemize} a lot.
-  \item
-    Use very short sentences or short phrases.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-
-  You can create overlays\dots
-  \begin{itemize}
-  \item using the \texttt{pause} command:
+\begin{frame}{Рачунање и променљиве у Python-у}
     \begin{itemize}
-    \item
-      First item.
-      \pause
-    \item
-      Second item.
+            \item
+                Python поседује моћан калкулатор
+            \pause
+            \item
+                Коментари могу бити једнолинијски (\#) или вишелинијски (""")
+            \pause
+            \item
+                Променљиве реферишу на вредност која им се додељује
+            \pause
     \end{itemize}
-  \item
-    using overlay specifications:
+    \begin{example}
+        \begin{itemize}
+                \item $>>> p = 1$
+                \item $>>> q = 2$
+                \item $>>> p = q$ \# promenljiva p referise na q
+                \item $>>>$ print $p$
+                \item $>>> 2$
+        \end{itemize}
+    \end{example}
+\end{frame}
+
+\begin{frame}{Услови и петље у Python-у}
     \begin{itemize}
-    \item<3->
-      First item.
-    \item<4->
-      Second item.
+            \item
+                Програмски блок је назубљен, са тачно 4 празна знака у односу на претходну линију
+            \pause
+            \item
+                Услов се реализује помоћу команди \alert{$if$} и \alert{$else$}
+            \pause
+            \item
+                \alert{$for$}, \alert{$while$} и \alert{$do$} петље
     \end{itemize}
-  \item
-    using the general \texttt{uncover} command:
+\end{frame}
+
+\subsection{Типови података у програмском језику Python}
+
+\begin{frame}{Уређене n-торке}
     \begin{itemize}
-      \uncover<5->{\item
-        First item.}
-      \uncover<6->{\item
-        Second item.}
+            \item Дефинишу се као низ елемената раздвојених зарезом
+            \pause
+            \item Непроменљиве у потпуности
+            \pause
     \end{itemize}
-  \end{itemize}
+    \begin{Example}
+        \begin{itemize}
+                \item $>>> jedan, dva = (1, 2)$
+                \item $>>> jedan$
+                \item $>>> 1$
+        \end{itemize}
+    \end{Example}
+\end{frame}
+
+\begin{frame}{Ниске}
+    \begin{itemize}
+            \item Низ знакова у оквиру знакова навода (' или ")
+            \pause
+            \item Први знак ниске има индексни број $0$, а последњи $-1$
+            \pause
+            \item Операције са нискама: спајање, мултипликација, исецање, итд.
+            \pause
+    \end{itemize}
+    \begin{Example}
+        \begin{itemize}
+        \item $>>> str =$ "Dobar dan"
+        \item $>>> print(str[0:5])$
+        \item $>>>$ Dobar
+        \end{itemize}
+    \end{Example}
+\end{frame}
+
+\begin{frame}{Листе}
+    \begin{itemize}
+            \item Низ произвољних елемената између угластих заграда
+            \pause
+            \item Индексни бројеви исти као и код ниски
+            \pause
+            \item Операције и методи са листама: исецање, спајање, додавање новог члана, брисање одређеног члана, сортирање, итд.
+            \pause
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Мапе}
+    \begin{itemize}
+            \item Мапе чине парови кључ-вредност, записани између витичастих заграда
+            \pause
+            \item Операције и методи са мапама: додељивање вредности кључу, брисање кључа, враћање листе свих кључева, итд.
+    \end{itemize}
 \end{frame}
 
 
-\subsection{Upotreba}
+\subsection{Употреба програмског језика Python}
 
-\begin{frame}{Make Titles Informative.}
+\begin{frame}{Коришћење Python-а данас}
+    \begin{itemize}
+            \item Развој веб апликација кроз употребу фрејмворка Django, Pyramid ili Bottle
+            \pause
+            \item У прикупљању и анализирању података приликом научних истраживања
+            \pause
+            \item Писање десктоп апликација, извршних скрипти, итд.
+    \end{itemize}
 \end{frame}
 
-\begin{frame}{Make Titles Informative.}
+\section{Претраживање и рангирање веб страница}
+
+\subsection{Креирање и начин рада веб-паука}
+
+\begin{frame}{Веб-паук}
+    \begin{enumerate}
+            \item Проналажење и смештање свих хипервеза и кључних речи са дате странице
+            \pause
+            \item Оне странице које нису обрађене смештају се у листу необрађених \alert{tocrawl}, а оне које обрадимо стављамо у листу обрађених \alert{crawled}
+            \pause
+            \item Ограничавање рада по дубини или по броју страна
+    \end{enumerate}
 \end{frame}
-
-
-
-\section{Претраживач}
-
-\subsection{Интернет претраживачи}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-
-\subsection{Веб-паук}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
 
 \subsection{Рангирање страница}
 
-\section*{Закључак}
-
-\begin{frame}{Закључак}
-
-  % Keep the summary *very short*.
-  \begin{itemize}
-  \item
-    The \alert{first main message} of your talk in one or two lines.
-  \item
-    The \alert{second main message} of your talk in one or two lines.
-  \item
-    Perhaps a \alert{third message}, but not more than that.
-  \end{itemize}
-
-  % The following outlook is optional.
-  \vskip0pt plus.5fill
-  \begin{itemize}
-  \item
-    Outlook
+\begin{frame}{Добијање одговора на упите}
     \begin{itemize}
-    \item
-      Something you haven't solved.
-    \item
-      Something else you haven't solved.
+            \item Претражују се све странице које садрже одговарајућу кључну реч
+            \pause
+            \item Резултат је листа страница
+            \pause
+            \item Индекс свих кључних речи и хипервеза које им одговарају
+            \pause
+            \item Убрзава се претраживање индекса коришћењем хеш табеле
+            \pause
+            \item Хеш табела се реализује помоћу листи или мапа
+            \pause
     \end{itemize}
-  \end{itemize}
 \end{frame}
 
+\begin{frame}{Рангирање претражених страница}
+    \begin{itemize}
+            \item PageRank алгоритам, оснивачи Гугла: Сергеј Брин и Лари Пејџ
+            \pause
+            \item \emph{Страница је важна, ако се на њу показује са других важних страница}
+            \pause
+        \item Све странице иницијално добију вредност $\frac{1}{n}$, где је $n$ број страница у индексу
+            \pause
+        \item ранг се рачуна итеративно као сума количника ранга страница које показују на дату страницу и броја свих излазних линкова: $rank_{k+1}(P_{i})=\alpha \sum_{P_{j}\in B_{P_{i}}}\frac{rank_{k}(P_{j})}{\left |P_{j} \right |} + (1-\alpha)\frac{1}{n}$
+            \pause
+            \item Уводи се граф у веб-паук, где се бележи на који начин се прескакало са странице на страницу
+                \pause
+                \item Рачуна се ранг за сваку страницу, резултати се сортирају
+    \end{itemize}
+\end{frame}
 
-% All of the following is optional and typically not needed.
-\appendix
-\section<presentation>*{\appendixname}
-\subsection<presentation>*{For Further Reading}
-
-\begin{frame}[allowframebreaks]
-  \frametitle<presentation>{For Further Reading}
-
-  \begin{thebibliography}{10}
-
-  \beamertemplatebookbibitems
-  % Start with overview books.
-
-  \bibitem{Author1990}
-    A.~Author.
-    \newblock {\em Handbook of Everything}.
-    \newblock Some Press, 1990.
-
-
-  \beamertemplatearticlebibitems
-  % Followed by interesting articles. Keep the list short.
-
-  \bibitem{Someone2000}
-    S.~Someone.
-    \newblock On this and that.
-    \newblock {\em Journal of This and That}, 2(1):50--100,
-    2000.
-  \end{thebibliography}
+\section{Закључак}
+\begin{frame}{Закључак}
+    \begin{itemize}
+            \item Програмски језик Python
+            \pause
+            \item Претраживање Интернета
+    \end{itemize}
 \end{frame}
 
 \end{document}
